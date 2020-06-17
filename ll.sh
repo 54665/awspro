@@ -52,7 +52,7 @@ beikong8_chushihua(){
 	chmod +x /usr/bin/aws
     }
 beikong9_chushihua(){
-    echo "更新管理脚本"
+    echo "卸载管理脚本"
 	wget https://raw.githubusercontent.com/54665/awspro/master/unaws.sh
     chmod +x unaws.sh
 	bash unaws.sh
@@ -69,7 +69,7 @@ echo && echo -e " AWS流量阈值副脚本
  ${Green_font_prefix}7.${Font_color_suffix} 开启秒级更新
  ${Green_font_prefix}8.${Font_color_suffix} 更新管理脚本
  ${Green_font_prefix}9.${Font_color_suffix} 卸载管理脚本" && echo
-stty erase '^H' && read -p " 请输入数字 [1-8]:" num
+stty erase '^H' && read -p " 请输入数字 [1-9]:" num
 case "$num" in
 	1)
 	beikong1_chushihua
@@ -100,6 +100,6 @@ case "$num" in
 	;;
 	
 	*)
-	echo "请输入正确数字 [1-8]"
+	echo "请输入正确数字 [1-9]"
 	;;
 esac
