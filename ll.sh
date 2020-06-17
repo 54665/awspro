@@ -46,6 +46,13 @@ beikong7_chushihua(){
 	chmod +x /etc/rc.d/rc.local
 	echo "/root/.awsll/second.sh >/root/.awsll/second.sh.log 2>&1" >> /etc/rc.d/rc.local
     }
+beikong6_chushihua(){
+	 echo "更新管理脚本"
+	    rm -rf /usr/bin/aws
+        curl -o /usr/bin/aws -Ls https://raw.githubusercontent.com/54665/awspro/master/ll.sh
+        chmod +x /usr/bin/aws
+    echo "安装完成，请输入 aws 管理流量统计"
+	}
 
 
 echo && echo -e " AWS流量阈值副脚本
