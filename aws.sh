@@ -62,7 +62,7 @@ beikong0_chushihua(){
 	echo "/root/.awsll/aws1024-zq.sh >/root/.awsll/aws1024.py.log 2>&1" >> /etc/rc.d/rc.local
 	echo "正在下载管理脚本"
     curl -o /usr/bin/aws -Ls https://raw.githubusercontent.com/54665/awspro/master/ll.sh
-	chmod +x /sur/bin/aws
+	chmod +x /user/bin/aws
     echo "安装完成，请输入 bash ll.sh 管理流量统计"
 	
 }
@@ -110,7 +110,7 @@ beikong1_chushihua(){
 	echo "/root/.awsll/aws2048-zq.sh >/root/.awsll/aws2048.py.log 2>&1" >> /etc/rc.d/rc.local
 	echo "正在下载管理脚本"
     curl -o /usr/bin/aws -Ls https://raw.githubusercontent.com/54665/awspro/master/ll.sh
-	chmod +x /sur/bin/aws
+	chmod +x /usr/bin/aws
     echo "安装完成，请输入 bash ll.sh 管理流量统计"
 }
 beikong2_chushihua(){
@@ -157,7 +157,7 @@ beikong2_chushihua(){
 	echo "/root/.awsll/aws5-zq.sh >/root/.awsll/aws5.py.log 2>&1" >> /etc/rc.d/rc.local
 	echo "正在下载管理脚本"
     curl -o /usr/bin/aws -Ls https://raw.githubusercontent.com/54665/awspro/master/ll.sh
-	chmod +x /sur/bin/aws
+	chmod +x /user/bin/aws
     echo "安装完成，请输入 bash ll.sh 管理流量统计"
 }
 echo && echo -e " AWS流量阈值关机脚本 V1.0.1 月初重置，开机自启，达量自动关机。
