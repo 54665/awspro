@@ -65,7 +65,7 @@ echo && echo -e " AWS流量阈值副脚本
  ${Green_font_prefix}6.${Font_color_suffix} 查看流量监控进程
  ${Green_font_prefix}7.${Font_color_suffix} 开启秒级更新(2秒)
  ${Green_font_prefix}8.${Font_color_suffix} 更新管理脚本" && echo
-stty erase '^H' && read -p " 请输入数字 [1-2]:" num
+stty erase '^H' && read -p " 请输入数字 [1-8]:" num
 case "$num" in
 	1)
 	beikong1_chushihua
@@ -93,6 +93,6 @@ case "$num" in
 	;;
 	
 	*)
-	echo "请输入正确数字 [1-7]"
+	echo "请输入正确数字 [1-8]"
 	;;
 esac
