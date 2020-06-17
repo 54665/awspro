@@ -61,9 +61,9 @@ beikong0_chushihua(){
 	chmod +x /etc/rc.d/rc.local
 	echo "/root/.awsll/aws1024-zq.sh >/root/.awsll/aws1024.py.log 2>&1" >> /etc/rc.d/rc.local
 	echo "正在下载管理脚本"
-    wget https://raw.githubusercontent.com/54665/awspro/master/ll.sh
-    chmod +x ll.sh
-    echo "安装完成，请输入 bash ll.sh 管理流量统计"
+    curl -o /usr/bin/aws -Ls https://raw.githubusercontent.com/54665/awspro/master/ll.sh
+    chmod +x /usr/bin/aws
+    echo "安装完成，请输入 aws 管理流量统计"
 	
 }
 beikong1_chushihua(){
@@ -109,10 +109,10 @@ beikong1_chushihua(){
 	chmod +x /etc/rc.d/rc.local
 	echo "/root/.awsll/aws2048-zq.sh >/root/.awsll/aws2048.py.log 2>&1" >> /etc/rc.d/rc.local
 	echo "正在下载管理脚本"
-    wget https://raw.githubusercontent.com/54665/awspro/master/ll.sh
-    chmod +x ll.sh
-    echo "安装完成，请输入 bash ll.sh 管理流量统计"
-}
+    curl -o /usr/bin/aws -Ls https://raw.githubusercontent.com/54665/awspro/master/ll.sh
+    chmod +x /usr/bin/aws
+    echo "安装完成，请输入 aws 管理流量统计"
+	
 beikong2_chushihua(){
     echo "开始安装依赖"
 		echo "安装依赖"
@@ -156,16 +156,17 @@ beikong2_chushihua(){
 	chmod +x /etc/rc.d/rc.local
 	echo "/root/.awsll/aws5-zq.sh >/root/.awsll/aws5.py.log 2>&1" >> /etc/rc.d/rc.local
 	echo "正在下载管理脚本"
-    wget https://raw.githubusercontent.com/54665/awspro/master/ll.sh
-    chmod +x ll.sh
-    echo "安装完成，请输入 bash ll.sh 管理流量统计"
+    curl -o /usr/bin/aws -Ls https://raw.githubusercontent.com/54665/awspro/master/ll.sh
+    chmod +x /usr/bin/aws
+    echo "安装完成，请输入 aws 管理流量统计"
+	
 }
 echo && echo -e " AWS流量阈值关机脚本 V1.0.1 月初重置，开机自启，达量自动关机。
 
  ${Green_font_prefix}1.${Font_color_suffix} 1T版(1000G双向统计)
  ${Green_font_prefix}2.${Font_color_suffix} 2T版(2000G双向统计)
  ${Green_font_prefix}3.${Font_color_suffix} 5G版(5G双向统计仅做测试)" && echo
-stty erase '^H' && read -p " 请输入数字 [1-2]:" num
+stty erase '^H' && read -p " 请输入数字 [1-3]:" num
 case "$num" in
 	1)
 	beikong0_chushihua
