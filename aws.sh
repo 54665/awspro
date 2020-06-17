@@ -166,7 +166,7 @@ echo && echo -e " AWS流量阈值关机脚本 V1.0.2 月初重置，开机自启
  ${Green_font_prefix}1.${Font_color_suffix} 1T版(1000G双向统计)
  ${Green_font_prefix}2.${Font_color_suffix} 2T版(2000G双向统计)
  ${Green_font_prefix}3.${Font_color_suffix} 5G版(5G双向统计)" && echo
-stty erase '^H' && read -p " 请输入数字 [1-3]:" num
+stty erase '^H' && read -p " 请输入数字 [1-5]:" num
 case "$num" in
 	1)
 	beikong0_chushihua
