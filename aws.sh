@@ -4,10 +4,6 @@
 #
 # Copyright (c) 2020.
 
-
-
-
-
 # Detect Debian users running the script with "sh" instead of bash
 if readlink /proc/$$/exe | grep -q "Bash"; then
 	echo "该脚本需要使用bash而不是sh运行"
