@@ -6,7 +6,7 @@
 
 echo "开始取消自启动"
     rm -rf /etc/rc.d/rc.local
-    wget https://github.com/54665/awspro/blob/master/rc.local -O /etc/rc.d/rc.local
+    wget https://raw.githubusercontent.com/54665/awspro/master/rc.local -O /etc/rc.d/rc.local
 echo "开始清空流量统计"
         rm -rf /var/lib/vnstat/eth0
 echo "开始创建流量统计"

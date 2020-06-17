@@ -12,13 +12,13 @@ crontab -e
 
 下载配置文件
 -----------------1T版本-----------------------------
-https://github.com/54665/awspro/blob/master/aws1024.py
+https://raw.githubusercontent.com/54665/awspro/master/aws1024.py
 
 chmod 777 aws1024.py
 
 nohup python aws1024.py &
 -----------------2T版本-----------------------------
-https://github.com/54665/awspro/blob/master/aws2048.py
+https://raw.githubusercontent.com/54665/awspro/master/aws2048.py
 
 chmod 777 aws2048.py
 

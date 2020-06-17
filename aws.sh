@@ -32,15 +32,15 @@ beikong0_chushihua(){
 		chkconfig vnstat on
 		vnstat -u -i eth0
 		mkdir /root/.awsll/
-		wget https://github.com/54665/awspro/blob/master/vnstat.sh -O /root/.awsll/vnstat.sh
+		wget https://raw.githubusercontent.com/54665/awspro/master/vnstat.sh -O /root/.awsll/vnstat.sh
 		chmod +x /root/.awsll/vnstat.sh
-		wget https://github.com/54665/awspro/blob/master/awsoff.sh -O /root/.awsll/awsoff.sh
+		wget https://raw.githubusercontent.com/54665/awspro/master/awsoff.sh -O /root/.awsll/awsoff.sh
 		chmod +x /root/.awsll/awsoff.sh
 		
 	read -p "是否下载1T版本脚本[y/N]" down_files_1
 	if [[ "$down_files_1" =~ ^[yY]$ ]]; then
 		echo "正在下载1T版脚本"
-		wget https://github.com/54665/awspro/blob/master/aws1024.py -O /root/.awsll/aws1024.py
+		wget https://raw.githubusercontent.com/54665/awspro/master/aws1024.py -O /root/.awsll/aws1024.py
 		chmod +x /root/.awsll/aws1024.py
 		nohup python /root/.awsll/aws1024.py >> /dev/null 2>&1 &
 		
@@ -56,12 +56,12 @@ beikong0_chushihua(){
     cron_config=$(crontab -l | grep "vnstat -u -i eth0")
     cron_config=$(crontab -l | grep "vnstat.sh")
     echo "正在添加自启任务"
-    wget https://github.com/54665/awspro/blob/master/aws1024-zq.sh -O /root/.awsll/aws1024-zq.sh
+    wget https://raw.githubusercontent.com/54665/awspro/master/aws1024-zq.sh -O /root/.awsll/aws1024-zq.sh
     chmod +x /root/.awsll/aws1024-zq.sh
 	chmod +x /etc/rc.d/rc.local
 	echo "/root/.awsll/aws1024-zq.sh >/root/.awsll/aws1024.py.log 2>&1" >> /etc/rc.d/rc.local
 	echo "正在下载管理脚本"
-    wget https://github.com/54665/awspro/blob/master/ll.sh
+    wget https://raw.githubusercontent.com/54665/awspro/master/ll.sh
     chmod +x ll.sh
     echo "安装完成，请输入 bash ll.sh 管理流量统计"
 	
@@ -80,15 +80,15 @@ beikong1_chushihua(){
 		chkconfig vnstat on
 		vnstat -u -i eth0
 		mkdir /root/.awsll/
-		wget https://github.com/54665/awspro/blob/master/vnstat.sh -O /root/.awsll/vnstat.sh
+		wget https://raw.githubusercontent.com/54665/awspro/master/vnstat.sh -O /root/.awsll/vnstat.sh
 		chmod +x /root/.awsll/vnstat.sh
-		wget https://github.com/54665/awspro/blob/master/awsoff.sh -O /root/.awsll/awsoff.sh
+		wget https://raw.githubusercontent.com/54665/awspro/master/awsoff.sh -O /root/.awsll/awsoff.sh
 		chmod +x /root/.awsll/awsoff.sh
 
 	read -p "是否下载2T版本脚本[y/N]" down_files_1
 	if [[ "$down_files_1" =~ ^[yY]$ ]]; then
 		echo "正在下载2T版脚本"
-		wget https://github.com/54665/awspro/blob/master/aws2048.py -O /root/.awsll/aws1024.py
+		wget https://raw.githubusercontent.com/54665/awspro/master/aws2048.py -O /root/.awsll/aws1024.py
 		chmod +x /root/.awsll/aws2048.py
 		nohup python /root/.awsll/aws2048.py >> /dev/null 2>&1 &
 		
@@ -104,12 +104,12 @@ beikong1_chushihua(){
     cron_config=$(crontab -l | grep "vnstat -u -i eth0")
     cron_config=$(crontab -l | grep "vnstat.sh")
     echo "正在添加自启任务"
-    wget https://github.com/54665/awspro/blob/master/aws2048-zq.sh -O /root/.awsll/aws2048-zq.sh
+    wget https://raw.githubusercontent.com/54665/awspro/master/aws2048-zq.sh -O /root/.awsll/aws2048-zq.sh
     chmod +x /root/.awsll/aws2048-zq.sh
 	chmod +x /etc/rc.d/rc.local
 	echo "/root/.awsll/aws2048-zq.sh >/root/.awsll/aws2048.py.log 2>&1" >> /etc/rc.d/rc.local
 	echo "正在下载管理脚本"
-    wget https://github.com/54665/awspro/blob/master/ll.sh
+    wget https://raw.githubusercontent.com/54665/awspro/master/ll.sh
     chmod +x ll.sh
     echo "安装完成，请输入 bash ll.sh 管理流量统计"
 }
@@ -127,15 +127,15 @@ beikong2_chushihua(){
 		chkconfig vnstat on
 		vnstat -u -i eth0
 		mkdir /root/.awsll/
-		wget https://github.com/54665/awspro/blob/master/vnstat.sh -O /root/.awsll/vnstat.sh
+		wget https://raw.githubusercontent.com/54665/awspro/master/vnstat.sh -O /root/.awsll/vnstat.sh
 		chmod +x /root/.awsll/vnstat.sh
-		wget https://github.com/54665/awspro/blob/master/awsoff.sh -O /root/.awsll/awsoff.sh
+		wget https://raw.githubusercontent.com/54665/awspro/master/awsoff.sh -O /root/.awsll/awsoff.sh
 		chmod +x /root/.awsll/awsoff.sh
 
 	read -p "是否下载5G版本脚本[y/N]" down_files_1
 	if [[ "$down_files_1" =~ ^[yY]$ ]]; then
 		echo "正在下载5G版脚本"
-		wget https://github.com/54665/awspro/blob/master/aws5.py -O /root/.awsll/aws5.py
+		wget https://raw.githubusercontent.com/54665/awspro/master/aws5.py -O /root/.awsll/aws5.py
 		chmod +x /root/.awsll/aws5.py
 		nohup python /root/.awsll/aws5.py >> /dev/null 2>&1 &
 		
@@ -151,12 +151,12 @@ beikong2_chushihua(){
     cron_config=$(crontab -l | grep "vnstat -u -i eth0")
     cron_config=$(crontab -l | grep "vnstat.sh")
     echo "正在添加自启任务"
-    wget https://github.com/54665/awspro/blob/master/aws5-zq.sh -O /root/.awsll/aws5-zq.sh
+    wget https://raw.githubusercontent.com/54665/awspro/master/aws5-zq.sh -O /root/.awsll/aws5-zq.sh
     chmod +x /root/.awsll/aws5-zq.sh
 	chmod +x /etc/rc.d/rc.local
 	echo "/root/.awsll/aws5-zq.sh >/root/.awsll/aws5.py.log 2>&1" >> /etc/rc.d/rc.local
 	echo "正在下载管理脚本"
-    wget https://github.com/54665/awspro/blob/master/ll.sh
+    wget https://raw.githubusercontent.com/54665/awspro/master/ll.sh
     chmod +x ll.sh
     echo "安装完成，请输入 bash ll.sh 管理流量统计"
 }
