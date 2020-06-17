@@ -4,6 +4,9 @@
 #
 # Copyright (c) 2020.
 
+
+
+
 # Detect Debian users running the script with "sh" instead of bash
 if readlink /proc/$$/exe | grep -q "Bash"; then
 	echo "该脚本需要使用bash而不是sh运行"
@@ -157,7 +160,7 @@ beikong2_chushihua(){
     echo "安装完成，请输入 aws 管理流量统计"
 	
 }
-echo && echo -e " AWS流量阈值关机脚本 V1.0.2 月初重置，开机自启，达量自动关机。
+echo && echo -e " AWS流量阈值关机脚本 V1.0.1 月初重置，开机自启，达量自动关机。
 
  ${Green_font_prefix}1.${Font_color_suffix} 1T版(1000G双向统计)
  ${Green_font_prefix}2.${Font_color_suffix} 2T版(2000G双向统计)
