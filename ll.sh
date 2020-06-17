@@ -56,7 +56,7 @@ echo && echo -e " AWS流量阈值副脚本
  ${Green_font_prefix}4.${Font_color_suffix} 刷新统计流量
  ${Green_font_prefix}5.${Font_color_suffix} 清空统计流量
  ${Green_font_prefix}6.${Font_color_suffix} 查看流量监控进程
- ${Green_font_prefix}7.${Font_color_suffix} 开启秒级更新" && echo
+ ${Green_font_prefix}7.${Font_color_suffix} 开启秒级更新(2秒)" && echo
 stty erase '^H' && read -p " 请输入数字 [1-2]:" num
 case "$num" in
 	1)
