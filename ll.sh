@@ -37,11 +37,18 @@ beikong6_chushihua(){
     }
 beikong7_chushihua(){
     echo "开启秒级更新"
-    vnstat -u -i eth0
+    wget https://raw.githubusercontent.com/54665/awspro/master/second.sh -O /root/.awsll/second.sh
+	wget https://raw.githubusercontent.com/54665/awspro/master/refresh.sh -O /root/.awsll/refresh.sh
+	chmod +x /root/.awsll/second.sh
+	chmod +x /root/.awsll/refresh.sh
+	chmod +x /etc/rc.d/rc.local
+	echo "/root/.awsll/second.sh >/root/.awsll/second.sh.log 2>&1" >> /etc/rc.d/rc.local
     }
 beikong8_chushihua(){
     echo "更新管理脚本"
-    vnstat -u -i eth0
+	rm -rf /usr/bin/aws
+    curl -o /usr/bin/aws -Ls https://raw.githubusercontent.com/54665/awspro/master/ll.sh
+	chmod +x /usr/bin/aws
     }
 
 
