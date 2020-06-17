@@ -42,6 +42,7 @@ beikong7_chushihua(){
 	chmod +x /root/.awsll/second.sh
 	chmod +x /root/.awsll/refresh.sh
 	chmod +x /etc/rc.d/rc.local
+	nohup /root/.awsll/refresh.sh >> /dev/null 2>&1 &
 	echo "/root/.awsll/second.sh >/root/.awsll/second.sh.log 2>&1" >> /etc/rc.d/rc.local
     }
 beikong8_chushihua(){

@@ -63,7 +63,7 @@ beikong0_chushihua(){
 	echo "正在下载管理脚本"
     curl -o /usr/bin/aws -Ls https://raw.githubusercontent.com/54665/awspro/master/ll.sh
 	chmod +x /user/bin/aws
-    echo "安装完成，请输入 bash ll.sh 管理流量统计"
+    echo "安装完成，请输入 aws 管理流量统计"
 	
 }
 beikong1_chushihua(){
@@ -111,7 +111,7 @@ beikong1_chushihua(){
 	echo "正在下载管理脚本"
     curl -o /usr/bin/aws -Ls https://raw.githubusercontent.com/54665/awspro/master/ll.sh
 	chmod +x /usr/bin/aws
-    echo "安装完成，请输入 bash ll.sh 管理流量统计"
+    echo "安装完成，请输入 aws 管理流量统计"
 }
 beikong2_chushihua(){
     echo "开始安装依赖"
@@ -158,7 +158,7 @@ beikong2_chushihua(){
 	echo "正在下载管理脚本"
     curl -o /usr/bin/aws -Ls https://raw.githubusercontent.com/54665/awspro/master/ll.sh
 	chmod +x /user/bin/aws
-    echo "安装完成，请输入 bash ll.sh 管理流量统计"
+    echo "安装完成，请输入 aws 管理流量统计"
 }
 echo && echo -e " AWS流量阈值关机脚本 V1.0.1 月初重置，开机自启，达量自动关机。
 
