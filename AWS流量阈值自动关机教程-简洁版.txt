@@ -1,0 +1,37 @@
+先安装依赖
+yum install -y epel-release
+yum install -y vnstat
+service vnstat start
+chkconfig vnstat on
+
+设置定时任务
+
+crontab -e
+
+*/1 * * * * /usr/bin/vnstat -u -i eth0
+
+下载配置文件
+-----------------1T版本-----------------------------
+https://dt.yixiagege.cn/aws/aws1024.py
+
+chmod 777 aws1024.py
+
+nohup python aws1024.py &
+-----------------2T版本-----------------------------
+https://dt.yixiagege.cn/aws/aws2048.py
+
+chmod 777 aws2048.py
+
+nohup python aws2048.py &
+-----------------------------------------------------
+查看当前实时流量 vnstat -l
+按天查看流量统计 vnstat -d
+按周查看流量统计 vnstat -w
+按月查看流量统计 vnstat -m
+查看详细帮助文档 vnstat -help
+配置文件在 /etc/vnstat.conf
+刷新流量 vnstat -u -i eth0
+-----------------------------------------------------
+查看运行的后台进程 jobs -l
+或者可以这样运行 nohup python aws2048.py  > /dev/null 2>&1 &
+-----------------------------------------------------

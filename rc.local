@@ -1,0 +1,9 @@
+#!/bin/bash
+#这个文件是为兼容性才添加的
+# THIS FILE IS ADDED FOR COMPATIBILITY PURPOSES
+#强烈建议使用systemd服务或udev规则来运行开机启动脚本,而不是使用这个文件
+# It is highly advisable to create own systemd services or udev rules to run scripts during boot instead of using this file.
+#与以前的版本引导时的并行执行相相比，这个脚本将不会在其它服务后执行
+# In contrast to previous versions due to parallel execution during boot this script will NOT be run after all other services.
+#请记住：你必须运行'chmod +x /etc/rc.d/rc.local'来确保这个脚本在启动时执行
+# Please note that you must run 'chmod +x /etc/rc.d/rc.local' to ensure that this script will be executed during boot
