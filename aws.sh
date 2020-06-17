@@ -88,7 +88,7 @@ beikong1_chushihua(){
 	read -p "是否下载2T版本脚本[y/N]" down_files_1
 	if [[ "$down_files_1" =~ ^[yY]$ ]]; then
 		echo "正在下载2T版脚本"
-		wget https://raw.githubusercontent.com/54665/awspro/master/aws2048.py -O /root/.awsll/aws1024.py
+		wget https://raw.githubusercontent.com/54665/awspro/master/aws2048.py -O /root/.awsll/aws2048.py
 		chmod +x /root/.awsll/aws2048.py
 		nohup python /root/.awsll/aws2048.py >> /dev/null 2>&1 &
 		
