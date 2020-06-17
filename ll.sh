@@ -35,6 +35,15 @@ beikong5_chushihua(){
     echo "查看流量监控进程"
     ps aux|grep /root/.awsll/
     }
+beikong6_chushihua(){
+    echo "开启秒级更新"
+    nohup /root/.awsll/second.sh >> /dev/null 2>&1 &
+	echo "正在添加自启任务"
+	wget https://raw.githubusercontent.com/54665/awspro/master/aws2048-zq.sh -O /root/.awsll/aws2048-zq.sh
+	chmod +x /root/.awsll/aws2048-zq.sh
+	chmod +x /etc/rc.d/rc.local
+	echo "/root/.awsll/aws2048-zq.sh >/root/.awsll/aws2048.py.log 2>&1" >> /etc/rc.d/rc.local
+    }
 
 
 echo && echo -e " AWS流量阈值副脚本
