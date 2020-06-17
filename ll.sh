@@ -51,6 +51,12 @@ beikong8_chushihua(){
     curl -o /usr/bin/aws -Ls https://raw.githubusercontent.com/54665/awspro/master/ll.sh
 	chmod +x /usr/bin/aws
     }
+beikong9_chushihua(){
+    echo "更新管理脚本"
+	wget https://raw.githubusercontent.com/54665/awspro/master/unaws.sh
+    chmod +x unaws.sh
+	bash unaws.sh
+    }
 
 
 echo && echo -e " AWS流量阈值副脚本
@@ -61,7 +67,8 @@ echo && echo -e " AWS流量阈值副脚本
  ${Green_font_prefix}4.${Font_color_suffix} 刷新统计流量
  ${Green_font_prefix}5.${Font_color_suffix} 清空统计流量
  ${Green_font_prefix}7.${Font_color_suffix} 开启秒级更新
- ${Green_font_prefix}8.${Font_color_suffix} 更新管理脚本" && echo
+ ${Green_font_prefix}8.${Font_color_suffix} 更新管理脚本
+ ${Green_font_prefix}9.${Font_color_suffix} 卸载管理脚本" && echo
 stty erase '^H' && read -p " 请输入数字 [1-8]:" num
 case "$num" in
 	1)
@@ -86,6 +93,9 @@ case "$num" in
 	beikong7_chushihua
 	;;
 	8)
+	beikong8_chushihua
+	;;
+	9)
 	beikong8_chushihua
 	;;
 	
