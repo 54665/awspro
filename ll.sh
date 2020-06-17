@@ -31,18 +31,20 @@ beikong5_chushihua(){
         reboot
 	fi
     }
-    beikong6_chushihua(){
+beikong6_chushihua(){
     echo "查看流量监控进程"
     ps aux|grep /root/.awsll/
     }
-beikong6_chushihua(){
+beikong7_chushihua(){
     echo "开启秒级更新"
-    nohup /root/.awsll/second.sh >> /dev/null 2>&1 &
+	wget https://raw.githubusercontent.com/54665/awspro/master/refresh.sh -O /root/.awsll/refresh.sh
+	chmod +x /root/.awsll/refresh.sh
+	wget https://raw.githubusercontent.com/54665/awspro/master/second.sh -O /root/.awsll/second.sh
+	chmod +x /root/.awsll/second.sh
+	nohup /root/.awsll/second.sh >> /dev/null 2>&1 &
 	echo "正在添加自启任务"
-	wget https://raw.githubusercontent.com/54665/awspro/master/aws2048-zq.sh -O /root/.awsll/aws2048-zq.sh
-	chmod +x /root/.awsll/aws2048-zq.sh
 	chmod +x /etc/rc.d/rc.local
-	echo "/root/.awsll/aws2048-zq.sh >/root/.awsll/aws2048.py.log 2>&1" >> /etc/rc.d/rc.local
+	echo "/root/.awsll/second.sh >/root/.awsll/second.sh.log 2>&1" >> /etc/rc.d/rc.local
     }
 
 
@@ -53,7 +55,8 @@ echo && echo -e " AWS流量阈值副脚本
  ${Green_font_prefix}3.${Font_color_suffix} 查看当月流量
  ${Green_font_prefix}4.${Font_color_suffix} 刷新统计流量
  ${Green_font_prefix}5.${Font_color_suffix} 清空统计流量
- ${Green_font_prefix}6.${Font_color_suffix} 查看流量监控进程" && echo
+ ${Green_font_prefix}6.${Font_color_suffix} 查看流量监控进程
+ ${Green_font_prefix}7.${Font_color_suffix} 开启秒级更新" && echo
 stty erase '^H' && read -p " 请输入数字 [1-2]:" num
 case "$num" in
 	1)
@@ -74,8 +77,11 @@ case "$num" in
 	6)
 	beikong6_chushihua
 	;;
+	7)
+	beikong7_chushihua
+	;;
 	
 	*)
-	echo "请输入正确数字 [1-6]"
+	echo "请输入正确数字 [1-7]"
 	;;
 esac
