@@ -7,7 +7,7 @@ yum install wget -y
 
 apt install wget -y
 
-wget wget https://raw.githubusercontent.com/54665/awspro/master/aws.sh &
+wget https://raw.githubusercontent.com/54665/awspro/master/aws.sh &
 chmod 777 aws.sh &
 bash aws.sh
 
