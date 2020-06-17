@@ -37,22 +37,12 @@ beikong6_chushihua(){
     }
 beikong7_chushihua(){
     echo "开启秒级更新"
-	wget https://raw.githubusercontent.com/54665/awspro/master/refresh.sh -O /root/.awsll/refresh.sh
-	chmod +x /root/.awsll/refresh.sh
-	wget https://raw.githubusercontent.com/54665/awspro/master/second.sh -O /root/.awsll/second.sh
-	chmod +x /root/.awsll/second.sh
-	nohup /root/.awsll/second.sh >> /dev/null 2>&1 &
-	echo "正在添加自启任务"
-	chmod +x /etc/rc.d/rc.local
-	echo "/root/.awsll/second.sh >/root/.awsll/second.sh.log 2>&1" >> /etc/rc.d/rc.local
+    vnstat -u -i eth0
     }
 beikong8_chushihua(){
-	 echo "更新管理脚本"
-	    rm -rf /usr/bin/aws
-        curl -o /usr/bin/aws -Ls https://raw.githubusercontent.com/54665/awspro/master/ll.sh
-        chmod +x /usr/bin/aws
-    echo "安装完成，请输入 aws 管理流量统计"
-	}
+    echo "更新管理脚本"
+    vnstat -u -i eth0
+    }
 
 
 echo && echo -e " AWS流量阈值副脚本
@@ -62,8 +52,7 @@ echo && echo -e " AWS流量阈值副脚本
  ${Green_font_prefix}3.${Font_color_suffix} 查看当月流量
  ${Green_font_prefix}4.${Font_color_suffix} 刷新统计流量
  ${Green_font_prefix}5.${Font_color_suffix} 清空统计流量
- ${Green_font_prefix}6.${Font_color_suffix} 查看流量监控进程
- ${Green_font_prefix}7.${Font_color_suffix} 开启秒级更新(2秒)
+ ${Green_font_prefix}7.${Font_color_suffix} 开启秒级更新
  ${Green_font_prefix}8.${Font_color_suffix} 更新管理脚本" && echo
 stty erase '^H' && read -p " 请输入数字 [1-8]:" num
 case "$num" in
@@ -89,7 +78,7 @@ case "$num" in
 	beikong7_chushihua
 	;;
 	8)
-	beikong7_chushihua
+	beikong8_chushihua
 	;;
 	
 	*)
