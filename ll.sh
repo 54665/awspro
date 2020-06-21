@@ -42,7 +42,7 @@ beikong7_chushihua(){
 	chmod +x /root/.awsll/second.sh
 	chmod +x /root/.awsll/refresh.sh
 	chmod +x /etc/rc.d/rc.local
-	nohup /root/.awsll/refresh.sh >> /dev/null 2>&1 &
+	nohup /root/.awsll/second.sh >> /dev/null 2>&1 &
 	echo "/root/.awsll/second.sh >/root/.awsll/second.sh.log 2>&1" >> /etc/rc.d/rc.local
     }
 beikong8_chushihua(){
@@ -66,6 +66,7 @@ echo && echo -e " AWS流量阈值副脚本
  ${Green_font_prefix}3.${Font_color_suffix} 查看当月流量
  ${Green_font_prefix}4.${Font_color_suffix} 刷新统计流量
  ${Green_font_prefix}5.${Font_color_suffix} 清空统计流量
+ ${Green_font_prefix}6.${Font_color_suffix} 查看监控进程
  ${Green_font_prefix}7.${Font_color_suffix} 开启秒级更新
  ${Green_font_prefix}8.${Font_color_suffix} 更新管理脚本
  ${Green_font_prefix}9.${Font_color_suffix} 卸载管理脚本" && echo
