@@ -62,7 +62,7 @@ beikong0_chushihua(){
 	echo "/root/.awsll/aws1024-zq.sh >/root/.awsll/aws1024.py.log 2>&1" >> /etc/rc.d/rc.local
 	echo "正在下载管理脚本"
     curl -o /usr/bin/aws -Ls https://raw.githubusercontent.com/54665/awspro/master/ll.sh
-	chmod +x /user/bin/aws
+	chmod +x /usr/bin/aws
     echo "安装完成，请输入 aws 管理流量统计"
 	
 }
