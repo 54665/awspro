@@ -8,7 +8,7 @@ yum install wget -y
 apt install wget -y
 
 wget https://raw.githubusercontent.com/54665/awspro/master/aws.sh &
-chmod 777 aws.sh &
+chmod +x 777 aws.sh &
 bash aws.sh
 
 脚本安装完成后 输入 aws 管理流量统计
