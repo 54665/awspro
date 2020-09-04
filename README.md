@@ -3,13 +3,14 @@ aws达量阈值自动关机脚本
 目前流量统计时间为一分钟一次，流量监控为2秒一次，脚本单位1T=1000G，提前一点掐断避免产生大量账单。
 
 使用方法
+
 yum install wget -y
 
 apt install wget -y
 
-wget https://raw.githubusercontent.com/54665/awspro/master/aws.sh &
-chmod +x 777 aws.sh &
-bash aws.sh
+<th> wget https://raw.githubusercontent.com/54665/awspro/master/aws.sh </th>
+<th> chmod +x 777 aws.sh </th>
+<th> bash aws.sh </th>
 
 脚本安装完成后 输入 aws 管理流量统计
 
