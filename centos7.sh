@@ -5,5 +5,5 @@
 # Copyright (c) 2020.
 
 /usr/sbin/sshd
-/etc/init.d/nginx reload
 /etc/init.d/bt restart
+/etc/init.d/nginx start
