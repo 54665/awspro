@@ -7,3 +7,4 @@
 /usr/sbin/sshd
 /etc/init.d/bt restart
 /etc/init.d/nginx start
+read -n 1
